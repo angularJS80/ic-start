@@ -19,9 +19,34 @@
       <ion-input type="password" #password></ion-input>
     </ion-item>
 
+    <ion-item>
+      <ion-label floating>Tel Number</ion-label>
+      <ion-input type="text" id="test-input" [(ngModel)]="myData" #myModel="ngModel" pattern="###-####-####" required pattern="010-[0-9]{4}-[0-9]{4}" ></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Number</ion-label>
+
+      <ion-input type="text" mask="999.999.999-99"  #myOtherModel.testinput1="ngModel"  [(ngModel)]="myOhterData.testinput1" required></ion-input>1
+
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Tel Number</ion-label>
+      <ion-input type="text" mask="(99) 9999-9999" [(ngModel)]="myOhterData.phone" required></ion-input>
+    </ion-item>
+
+
+
+
+
+
   </ion-list>
 
   <div padding>
     <button block ion-button (click)="doRegister()">Register</button>
+
   </div>
+
 </ion-content>
+

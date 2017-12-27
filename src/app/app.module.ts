@@ -11,6 +11,7 @@ import {RegisterPage} from "../pages/register/register";
 
 import {AngularFireModule} from "angularfire2";
 import {AngularFireAuthModule, AngularFireAuth} from "angularfire2/auth";
+import {Ionic2MaskDirective} from "ionic2-mask-directive";
 
 // Initialize Firebase
 const firebaseAuth= {
@@ -31,14 +32,13 @@ const firebaseAuth= {
     HomePage,
     LoginPage,
     RegisterPage,
-
+    Ionic2MaskDirective
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
