@@ -29,7 +29,7 @@ export class RegisterPage {
 
 
   //@ViewChild('myOtherModel')
-  myOhterData:NgModel;
+  //myOhterData:NgModel;
 
   myOhterData= {
     testinput1:'',
