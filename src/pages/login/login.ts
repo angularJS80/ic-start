@@ -38,7 +38,7 @@ export class LoginPage {
   }
 
   doSignIn(){
-    this.fire.auth.signInWithEmailAndPassword(this.uname.value,this.pword.value)
+    this.fire.auth.signInWithEmailAndPassword(this.uname.value+'@domain.xta',this.pword.value)
       .then(data=>{
           console.log('data:',this.fire.auth.currentUser);
           this.ctrlAlert('info','login success!');

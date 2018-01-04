@@ -13,17 +13,11 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFireAuthModule, AngularFireAuth} from "angularfire2/auth";
 import {Ionic2MaskDirective} from "ionic2-mask-directive";
 import {LoggedinPage} from "../pages/loggedin/loggedin";
-
+import * as firebase from 'firebase';
 // Initialize Firebase
 const firebaseAuth= {
-  apiKey: "AIzaSyCVovQE5tMaatFfj98oyyjqeaVpoQzqPXA",
-  authDomain: "tutoralnavi3.firebaseapp.com",
-  databaseURL: "https://tutoralnavi3.firebaseio.com",
-  projectId: "tutoralnavi3",
-  storageBucket: "tutoralnavi3.appspot.com",
-  messagingSenderId: "188830952888"
-};
 
+};
 
 
 
@@ -58,4 +52,10 @@ const firebaseAuth= {
 
     ]
 })
-export class AppModule {}
+export class AppModule {
+
+   test(){
+  console.log(firebase.SDK_VERSION);
+}
+
+}

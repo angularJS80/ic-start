@@ -2,8 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import {AngularFireAuth} from "angularfire2/auth";
 import {NgModel} from "@angular/forms";
-import {Observable} from "rxjs";
-//import * as firebase from 'firebase';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -44,7 +43,8 @@ export class RegisterPage {
   }
 
   doRegister(){
-    this.fire.auth.createUserAndRetrieveDataWithEmailAndPassword(this.uname.value,this.pword.value)
+    //this.fire.auth.createUserAndRetrieveDataWithEmailAndPassword(this.uname.value+'@domain.xta',this.pword.value)
+    this.fire.auth.createUserWithEmailAndPassword(this.uname.value+'@domain.xta',this.pword.value)
       .then(data=>{
           console.log('data:',data);
         }
