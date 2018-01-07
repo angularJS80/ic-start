@@ -1,8 +1,8 @@
 import {Component, NgZone} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, PopoverController} from 'ionic-angular';
 import {LoginPage} from "../login/login";
 import {RegisterPage} from "../register/register";
-import {BLE} from "@ionic-native/ble";
+
 import {BleeqlistPage} from "../bleeqlist/bleeqlist";
 
 
@@ -16,7 +16,7 @@ export class HomePage {
 
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public popoverCtrl:PopoverController) {
 
   }
 
@@ -33,6 +33,11 @@ export class HomePage {
 
   moveBleeqlist(){
     this.navCtrl.push(BleeqlistPage)
+  }
+
+  popBleeqlist() {
+    let popover = this.popoverCtrl.create(BleeqlistPage);
+    popover.present();
   }
 
 }
