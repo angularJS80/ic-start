@@ -18,6 +18,8 @@ import { BLE } from '@ionic-native/ble';
 import * as firebase from 'firebase';
 import {BlefnlistPage} from "../pages/blefnlist/blefnlist";
 import {BleeqlistPage} from "../pages/bleeqlist/bleeqlist";
+import {CRC} from "../util/CRC";
+import {MainPage} from "../pages/main/main";
 
 // Initialize Firebase
 const firebaseAuth= {
@@ -34,6 +36,7 @@ const firebaseAuth= {
 @NgModule({
   declarations: [
     MyApp,
+    MainPage,
     HomePage,
     LoginPage,
     RegisterPage,
@@ -41,16 +44,26 @@ const firebaseAuth= {
     Ionic2MaskDirective,
     BlefnlistPage,
     BleeqlistPage,
+
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
+
+    IonicModule.forRoot(MyApp,{
+      menuType: 'push',
+      platforms: {
+        android: {
+          menuType: 'overlay',
+        }
+      }
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    MainPage,
     HomePage,
     LoginPage,
     RegisterPage,
@@ -63,8 +76,8 @@ const firebaseAuth= {
     SplashScreen,
     AngularFireAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BLE
-
+    BLE,
+    CRC
     ]
 })
 export class AppModule {

@@ -1,9 +1,10 @@
-import {Component, NgZone} from '@angular/core';
+import {Component} from '@angular/core';
 import {NavController, PopoverController} from 'ionic-angular';
 import {LoginPage} from "../login/login";
 import {RegisterPage} from "../register/register";
 
 import {BleeqlistPage} from "../bleeqlist/bleeqlist";
+import {FormBuilder} from "@angular/forms";
 
 
 
@@ -13,8 +14,6 @@ import {BleeqlistPage} from "../bleeqlist/bleeqlist";
 
 })
 export class HomePage {
-
-
 
   constructor(public navCtrl: NavController,public popoverCtrl:PopoverController) {
 
