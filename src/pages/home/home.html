@@ -1,10 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar primary hideBackButton>
+
+    <button ion-button menuToggle icon-only >
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+
+    <ion-title>
+      HOME
+    </ion-title>
+
+    <ion-buttons start>
+      <button  ion-button  persistent="true" navPop>
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>

@@ -1,0 +1,48 @@
+<!--
+  Generated template for the BlefnlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar primary hideBackButton>
+    <!--!menuToggle-->
+
+
+
+    <ion-buttons end>
+
+      <button ion-button   persistent="true" icon-only (click)="menuOpne()"  >
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <button  ion-button  persistent="true" navPop>
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content #logContent >
+  <div class="message-wrap">
+    <div *ngFor="let msg of messages"
+         class="message"
+         [class.left]="msg.username === username"
+         [class.right]="msg.username != username">
+
+      <img class="user-img" alt="" src="/assets/abata/test.jpg">
+      <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+      <div class="msg-detail">
+        <div class="msg-info">
+          <p>
+            {{msg.username }}&nbsp;&nbsp;&nbsp;<!--{{msg.time | relativeTime}}--></p>
+        </div>
+        <div class="msg-content">
+          <span class="triangle"></span>
+          <p class="line-breaker ">{{msg.message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

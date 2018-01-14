@@ -1,10 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, PopoverController} from 'ionic-angular';
-import {LoginPage} from "../login/login";
-import {RegisterPage} from "../register/register";
 
-import {BleeqlistPage} from "../bleeqlist/bleeqlist";
-import {FormBuilder} from "@angular/forms";
 
 
 
@@ -18,25 +14,14 @@ export class HomePage {
   constructor(public navCtrl: NavController,public popoverCtrl:PopoverController) {
 
   }
-
-
-
-  moveSignIn(){
-    this.navCtrl.push(LoginPage);
-
+  let saveParams;
+  public getSaveParam(){
+    return this.saveParams;
   }
 
-  moveRegister(){
-    this.navCtrl.push(RegisterPage)
+  public setSaveParam(params:any){
+    this.saveParams =  params;
   }
 
-  moveBleeqlist(){
-    this.navCtrl.push(BleeqlistPage)
-  }
-
-  popBleeqlist() {
-    let popover = this.popoverCtrl.create(BleeqlistPage);
-    popover.present();
-  }
 
 }
