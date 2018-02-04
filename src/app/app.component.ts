@@ -5,8 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import {LoginPage} from "../pages/login/login";
-import {BleeqlistPage} from "../pages/bleeqlist/bleeqlist";
-import {BlefnlistPage} from "../pages/blefnlist/blefnlist";
+//import {BleeqlistPage} from "../pages/bleeqlist/bleeqlist";
+//import {BlefnlistPage} from "../pages/blefnlist/blefnlist";
 import {ChatPage} from "../pages/chat/chat";
 import {RegisterPage} from "../pages/register/register";
 @Component({
@@ -31,8 +31,8 @@ export class MyApp {
       { title: 'Home', component: HomePage ,saveParams:{test:1234}},
       { title: 'Register', component: RegisterPage ,saveParams:{test:1234}},
       { title: 'Login', component: LoginPage ,saveParams:{test:1234}},
-      { title: 'BleEqList', component: BleeqlistPage ,saveParams:{test:1234}},
-      { title: 'BleFnList', component: BlefnlistPage ,saveParams:{test:1234}},
+  //    { title: 'BleEqList', component: BleeqlistPage ,saveParams:{test:1234}},
+  //    { title: 'BleFnList', component: BlefnlistPage ,saveParams:{test:1234}},
       { title: 'BleLog', component: ChatPage ,saveParams:{test:1234}}
 
     ];

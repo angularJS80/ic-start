@@ -13,14 +13,14 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFireAuthModule, AngularFireAuth} from "angularfire2/auth";
 import {AngularFireDatabaseModule} from "angularfire2/database-deprecated";
 import {Ionic2MaskDirective} from "ionic2-mask-directive";
-import {LoggedinPage} from "../pages/loggedin/loggedin";
+//import {LoggedinPage} from "../pages/loggedin/loggedin";
 import { BLE } from '@ionic-native/ble';
 
 import * as firebase from 'firebase';
-import {BlefnlistPage} from "../pages/blefnlist/blefnlist";
-import {BleeqlistPage} from "../pages/bleeqlist/bleeqlist";
+//import {BlefnlistPage} from "../pages/blefnlist/blefnlist";
+//import {BleeqlistPage} from "../pages/bleeqlist/bleeqlist";
 import {CRC} from "../util/CRC";
-import {MainPage} from "../pages/main/main";
+//import {MainPage} from "../pages/main/main";
 import {ChatPage} from "../pages/chat/chat";
 
 // Initialize Firebase
@@ -38,14 +38,14 @@ const firebaseAuth = {
 @NgModule({
   declarations: [
     MyApp,
-    MainPage,
+//    MainPage,
     HomePage,
     LoginPage,
     RegisterPage,
-    LoggedinPage,
+    //LoggedinPage,
     Ionic2MaskDirective,
-    BlefnlistPage,
-    BleeqlistPage,
+//    BlefnlistPage,
+//    BleeqlistPage,
     ChatPage,
 
   ],
@@ -66,13 +66,13 @@ const firebaseAuth = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    MainPage,
+ //   MainPage,
     HomePage,
     LoginPage,
     RegisterPage,
-    LoggedinPage,
-    BlefnlistPage,
-    BleeqlistPage,
+    //LoggedinPage,
+//    BlefnlistPage,
+//    BleeqlistPage,
     ChatPage,
   ],
   providers: [
